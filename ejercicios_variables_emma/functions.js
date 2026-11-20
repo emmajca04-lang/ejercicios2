@@ -28,7 +28,7 @@ function getFullName(name, lastName) {
     return (name +  ' ' + lastName)
 };
 
-console.log(getFullName(name, lastName))
+console.log(getFullName('Godo', 'Fredo'))
 
 
 const batteryLevel = 80
