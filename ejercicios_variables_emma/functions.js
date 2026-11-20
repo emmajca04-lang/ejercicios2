@@ -25,10 +25,49 @@ const name = 'Godo';
 const lastName = 'Fredo';
 
 function getFullName(name, lastName) {
-    return console.log(name, lastName)
+    return name + lastName
 };
 
-getFullName(name, lastName)
+console.log(getFullName)
 
 
-function calculateTip(bill, percent = 10) 
+const batteryLevel = 80
+const isCharging = true
+
+function checkBattery(batteryLevel, isCharging) {
+    if (isCharging === true) {
+        console.log("Cargando (" + batteryLevel + "%)")
+    } 
+    else if (!isCharging && batteryLevel <=5){
+            console.log("Bateria critica: el movil se apagara pronto")
+        }
+    else if (isCharging === false && batteryLevel >=20) {
+        console.log("Bateria baja")
+    }
+    else {
+        console.log('Bateria correcta')
+    }
+};
+
+checkBattery (80, true)
+
+const age = 10
+const withAdult = false
+const rating = '+12' //'TP' '+12' '+16' '+18'
+
+function checkMovieEntrance(age, withAdult, rating){
+if (rating === 'TP' ) {
+    console.log('Puede entrar');
+} else if (rating === '+12' && (age >= 12 || age >=7 && withAdult)) {
+    console.log('Puede entrar')
+} else if (rating === '+16' && age >=16){
+    console.log('Puede entrar')
+} else if (rating === '+18' && age >=18){
+    console.log('Puede entrar')
+} else if (rating !== 'TP' && rating !== '+12' && rating !== '+16' && rating !== '+18'){
+    console.log('Classificacion desconocida')
+}else {
+    console.log('No puede entar')
+}}
+
+checkMovieEntrance(10, false, 'TP')
