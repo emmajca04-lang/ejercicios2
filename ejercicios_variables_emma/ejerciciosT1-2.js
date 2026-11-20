@@ -34,9 +34,37 @@ console.log(bookCard, isLongBook, hasRevengeInTitle, titleLength);
 
 const username = 'godo';
 
-const isValidUsername = username.length >=3 && username.length <=15;
+const isValidUsername = username.length >=3 && username.length <=15 && !username.startsWith('_') && !username.includes(' ');
 
 console.log(isValidUsername);
 
 
 
+function isValidUsername(username) {
+  return username.length >= 3 &&
+         username.length <= 15 &&
+         !username.startsWith('_') &&
+         !username.includes(' ');
+}
+
+console.log(isValidUsername('godo'));
+
+const hasCourt = true;
+const players = 4;
+const isRaining = false;
+
+const canPlay = hasCourt && players === 4 && !isRaining;
+
+const needsMorePlayers = players < 4;
+
+console.log(canPlay, needsMorePlayers);
+
+
+function canPlay(hasCourt, players, isRaining) {
+  return hasCourt && players === 4 && !isRaining;
+}
+
+console.log(canPlay(true, 4, false));
+console.log(canPlay(true, 3, false));  
+console.log(canPlay(true, 4, true));   
+console.log(canPlay(false, 5, false)); 
