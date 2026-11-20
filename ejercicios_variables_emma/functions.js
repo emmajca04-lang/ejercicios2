@@ -25,10 +25,10 @@ const name = 'Godo';
 const lastName = 'Fredo';
 
 function getFullName(name, lastName) {
-    return name + lastName
+    return (name +  ' ' + lastName)
 };
 
-console.log(getFullName)
+console.log(getFullName(name, lastName))
 
 
 const batteryLevel = 80
@@ -49,7 +49,7 @@ function checkBattery(batteryLevel, isCharging) {
     }
 };
 
-checkBattery (80, true)
+checkBattery (80, false)
 
 const age = 10
 const withAdult = false
